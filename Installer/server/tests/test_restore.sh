@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # pops-restore --list davranış testleri (CI: "Server scripts").
 # Root GEREKMEZ ve root olarak ÇALIŞMAZ: her yol geçici bir dizindedir.
+# Koşullar check'e bilerek tek tırnakla verilir ve eval ile değerlendirilir: değişkenler o anda açılır (SC2016);
+# yalnızca bu koşullarda okunan değişkenler shellcheck'e kullanılmıyor görünür (SC2034).
+# shellcheck disable=SC2016,SC2034
 # Sistemde hiçbir şeye dokunulmaz.
 #     bash Installer/server/tests/test_restore.sh
 set -euo pipefail
